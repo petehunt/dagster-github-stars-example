@@ -1,0 +1,4 @@
+ports:
+- port: 3000
+tasks:
+- command: cd my-dagster-project && pip install -e '.[dev]'
