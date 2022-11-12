@@ -9,6 +9,7 @@ from dagster import (
     with_resources,
 )
 import inspect
+from dotenv import load_dotenv
 
 # This is a bandaid library to paper over core API usability issues until we sort
 # them out. The idea is that this will be a library separate from Dagster but
@@ -38,6 +39,7 @@ import inspect
 
 
 _quickstart_called = False
+load_dotenv()
 
 
 def quickstart(
@@ -76,7 +78,7 @@ def quickstart(
     frame = inspect.stack()[1].frame
     if not frame.f_code.co_filename.endswith("__init__.py"):
         raise RuntimeError("quickstart() must be called from __init__.py")
-        
+
     f_locals = frame.f_locals
 
     if "quickstart_repo" in f_locals:

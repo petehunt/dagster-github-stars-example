@@ -13,6 +13,7 @@ if __name__ == "__main__":
             "nbformat",
             "ipykernel",
             "jupytext",
+            "python-dotenv",
         ],
         extras_require={"dev": ["dagit", "pytest"]},
     )
