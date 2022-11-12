@@ -14,6 +14,8 @@ if __name__ == "__main__":
             "ipykernel",
             "jupytext",
             "python-dotenv",
+            "duckdb",
+            "tqdm",
         ],
         extras_require={"dev": ["dagit", "pytest"]},
     )
